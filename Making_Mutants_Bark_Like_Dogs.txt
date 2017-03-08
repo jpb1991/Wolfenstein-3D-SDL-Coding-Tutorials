@@ -1,0 +1,17 @@
+This code was created by Chris Choken.
+
+Code:
+
+         case mutantobj: 
+
+
++            PlaySoundLocActor(DOGBARKSND,ob); 
+
+
+             NewState (ob,&s_mutchase1); 
+
+
+             ob->speed *= 3;                 // go faster when chasing player 
+
+
+             break;

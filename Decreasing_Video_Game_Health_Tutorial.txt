@@ -1,0 +1,24 @@
+Instructions created by Barry
+
+Instructions:
+
+You have to add the sprite to wl_act1
+{SPR_TOXWASTE,bo_toxic},                  //toxic waste
+Then add a case
+case    bo_toxic:
+and then add bo_toxic to wl_def.h
+In wl_def.h, you add it to the Global Types section
+
+Code:
+
+case    bo_toxic:
+            if(gamestate.health <= 1)
+            {
+                HealSelf (-gamestate.health);
+                StartDamageFlash (1);
+                playstate = ex_died;
+            }
+            else
+            HealSelf (-1);
+            StartDamageFlash (1);
+            return;
